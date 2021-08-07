@@ -146,3 +146,28 @@ WHERE RENTAL_RATE = 0.99
 SELECT COUNT(DISTINCT(REPLACEMENT_COST)) FROM FILM
 WHERE LENGTH>150
 ~~~
+
+
+## <p id = 'Ödev 7' > Ödev 7 </p>
+#### Film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
+~~~sql
+SELECT RATING FROM FILM
+GROUP BY RATING
+~~~
+#### Film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız
+~~~sql
+SELECT REPLACEMENT_COST,COUNT(REPLACEMENT_COST) FROM FILM
+GROUP BY REPLACEMENT_COST
+HAVING COUNT(REPLACEMENT_COST) >50
+~~~
+#### Customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir?
+
+~~~sql
+SELECT STORE_ID,COUNT(CUSTOMER_ID) FROM CUSTOMER 
+GROUP BY STORE_ID
+~~~
+#### City tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıra country_id bilgisini ve şehir sayısını paylaşınız.
+~~~sql
+SELECT COUNTRY_ID,COUNT(CITY) AS NUMBER_CITY FROM CITY
+GROUP BY COUNTRY_ID
+~~~
