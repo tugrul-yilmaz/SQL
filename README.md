@@ -52,3 +52,28 @@ SELECT * FROM FILM
 WHERE RENTAL_RATE IN (0.99,2.99,4.99) AND REPLACEMENT_COST IN (12,99,15.99,28.99)
 ~~~
 
+
+## <p id = 'Ödev 3' > Ödev 3 </p>
+#### Country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
+~~~sql
+SELECT COUNTRY FROM COUNTRY
+WHERE COUNTRY LIKE 'A%a'
+~~~
+#### country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız
+~~~sql
+SELECT COUNTRY  FROM COUNTRY
+WHERE LENGTH(COUNTRY) >6 AND COUNTRY LIKE '%n'
+~~~
+#### Film tablosunda bulunan title sütunundaki film isimlerinden en az 4 adet büyük ya da küçük harf farketmesizin 'T' karakteri içeren film isimlerini sıralayınız.
+~~~sql
+SELECT TITLE FROM FILM
+WHERE TITLE ILIKE ('%T%T%T%T%')
+~~~
+#### Film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile başlayan ve uzunluğu (length) 90 dan büyük olan ve rental_rate 2.99 olan verileri sıralayınız.
+
+~~~sql
+SELECT * FROM FILM
+WHERE TITLE LIKE ('C%') AND LENGTH > 90 AND RENTAL_RATE=2.99
+~~~
+
+
