@@ -102,3 +102,27 @@ WHERE CITY ILIKE '%R'
 ~~~
 
 
+## <p id = 'Ödev 5' > Ödev 5 </p>
+#### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
+~~~sql
+SELECT TITLE FROM FILM
+WHERE TITLE LIKE '%n'
+ORDER BY LENGTH DESC
+LIMIT 5
+~~~
+#### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci 5 filmi sıralayınız.
+~~~sql
+SELECT TITLE FROM FILM
+WHERE TITLE LIKE '%n'
+ORDER BY LENGTH 
+OFFSET 5
+LIMIT 5
+~~~
+#### Customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+~~~sql
+SELECT * FROM CUSTOMER
+WHERE STORE_ID =1
+ORDER BY LAST_NAME DESC
+LIMIT 4
+~~~
+
