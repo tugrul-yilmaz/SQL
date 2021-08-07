@@ -96,6 +96,7 @@ SELECT COUNT(COUNTRY) FROM COUNTRY
 WHERE LENGTH(COUNTRY) = 5
 ~~~
 #### City tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
+~~~sql
 SELECT CITY FROM CITY
 WHERE CITY ILIKE '%R'
 ~~~
