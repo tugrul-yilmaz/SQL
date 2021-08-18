@@ -194,9 +194,12 @@ insert into employee (id, name, birthday, email) values (5, 'Viviyan', '1995-02-
 ~~~
 #### Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 ~~~sql
-
+UPDATE employee 
+SET NAME= 'Tugrul',birthday= '1996-07-13' ,email= 'tugrul@gmail.com'
+WHERE id=1
 ~~~
 #### Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 ~~~sql
-
+DELETE  FROM EMPLOYEE
+WHERE id=1
 ~~~
