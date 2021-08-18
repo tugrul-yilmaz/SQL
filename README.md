@@ -7,6 +7,7 @@
 <a href='#Ödev 5'>Ödev 5</a><br>
 <a href='#Ödev 6'>Ödev 6</a><br>
 <a href='#Ödev 7'>Ödev 7</a><br>
+<a href='#Ödev 8'>Ödev 8</a><br>
 
 ## <p id = 'Ödev 1' > Ödev 1 </p>
 #### Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
@@ -170,4 +171,32 @@ GROUP BY STORE_ID
 ~~~sql
 SELECT COUNTRY_ID,COUNT(CITY) AS NUMBER_CITY FROM CITY
 GROUP BY COUNTRY_ID
+~~~
+
+
+
+## <p id = 'Ödev 8' > Ödev 8 </p>
+#### Test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+~~~sql
+CREATE TABLE employee 
+(id int,
+name varchar(50),
+birthday date,
+email varchar(50)
+~~~
+#### Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+~~~sql
+insert into employee (id, name, birthday, email) values (1, 'Gabbie', '1978-03-10', 'gtantum0@timesonline.co.uk');
+insert into employee (id, name, birthday, email) values (2, 'Gregorio', '1964-07-20', 'gscarman1@163.com');
+insert into employee (id, name, birthday, email) values (3, 'Manuel', '1972-06-13', 'mbyers2@upenn.edu');
+insert into employee (id, name, birthday, email) values (4, 'Amery', '1978-11-29', 'amccarthy3@shutterfly.com');
+insert into employee (id, name, birthday, email) values (5, 'Viviyan', '1995-02-12', 'vmatejovsky4@storify.com');
+~~~
+#### Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+~~~sql
+
+~~~
+#### Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+~~~sql
+
 ~~~
