@@ -8,7 +8,7 @@
 <a href='#Ödev 6'>Ödev 6</a><br>
 <a href='#Ödev 7'>Ödev 7</a><br>
 <a href='#Ödev 8'>Ödev 8</a><br>
-<a href='#Ödev 9'>Ödev 8</a><br>
+<a href='#Ödev 9'>Ödev 9</a><br>
 
 ## <p id = 'Ödev 1' > Ödev 1 </p>
 #### Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
