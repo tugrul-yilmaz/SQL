@@ -11,6 +11,7 @@
 <a href='#Ödev 9'>Ödev 9</a><br>
 <a href='#Ödev 10'>Ödev 10</a><br>
 <a href='#Ödev 11'>Ödev 11</a><br>
+<a href='#Ödev 12'>Ödev 12</a><br>
 
 ## <p id = 'Ödev 1' > Ödev 1 </p>
 #### Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
@@ -286,3 +287,32 @@ EXCEPT ALL
 (SELECT FIRST_NAME FROM CUSTOMER)
 ~~~
 
+## <p id = 'Ödev 12' > Ödev 12 </p>
+#### Film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+~~~sql
+SELECT COUNT(DISTINCT(FILM_ID))FROM FILM
+WHERE LENGTH > 
+(SELECT AVG(LENGTH) FROM FILM)
+~~~
+#### Film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+
+~~~sql
+SELECT COUNT(DISTINCT(FILM_ID))FROM FILM
+WHERE RENTAL_RATE = 
+(SELECT MAX(RENTAL_RATE) FROM FILM)
+~~~
+#### Film tablosunda en düşük rental_rate ve en düşün replacement_cost değerlerine sahip filmleri sıralayınız.
+
+~~~sql
+SELECT TITLE FROM FILM
+WHERE (RENTAL_RATE = (SELECT MIN(RENTAL_RATE) FROM FILM)) AND  (REPLACEMENT_COST = (SELECT MIN(REPLACEMENT_COST) FROM FILM))
+~~~
+
+#### Payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+~~~sql
+SELECT CUSTOMER_ID,COUNT(PAYMENT_ID) FROM PAYMENT
+GROUP BY CUSTOMER_ID
+ORDER BY COUNT DESC
+LIMIT 1
+~~~
